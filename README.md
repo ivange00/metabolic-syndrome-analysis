@@ -41,6 +41,8 @@ It contains approximately 1 million records with demographic, lifestyle, and cli
 -   Risk factor calculation
 -   Metabolic syndrome classification
 
+For the waist circumference cut-off value as a risk factor, I use The Korean Society for the Study of Obesity (KSSO) as a source. https://pmc.ncbi.nlm.nih.gov/articles/PMC2858833/
+
 ### Exploratory analysis
 
 The notebook includes:
