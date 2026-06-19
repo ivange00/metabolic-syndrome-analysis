@@ -87,6 +87,12 @@ A Streamlit web application allows users to:
 streamlit run app.py
 ```
 
+## Run the app online
+
+Try the interactive application here:
+
+**https://ms-probability.streamlit.app/**
+
 ------------------------------------------------------------------------
 
 ## Model
