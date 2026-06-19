@@ -1,8 +1,8 @@
 # Metabolic Syndrome Analysis
 
-A Python project that explores the relationship between lifestyle factors and metabolic syndrome using data from a Korean health database.
+This project analyzes a large Korean public health dataset and builds a statistical model to estimate the probability of metabolic syndrome based on demographic and lifestyle factors.
 
-The project combines exploratory data analysis, statistical modelling and predictive modelling to study how age, sex, smoking and alcohol consumption are associated with metabolic syndrome.
+It combines exploratory data analysis, statistical modelling, and an interactive web application built with Streamlit.
 
 ------------------------------------------------------------------------
 
@@ -10,28 +10,25 @@ The project combines exploratory data analysis, statistical modelling and predic
 
 The objectives of this project are:
 
--   Calculate the number of metabolic syndrome risk factors for each individual.
+-   Compute metabolic syndrome risk factors per individual
 
--   Classify participants according to the presence of metabolic syndrome.
+-   Define metabolic syndrome based on clinical criteria
 
--   Explore differences in risk factor distribution across smoking and alcohol consumption groups.
+-   Explore relationships between lifestyle habits and health outcomes
 
--   Build statistical models to predict:
+-   Build a logistic regression model to estimate metabolic syndrome probability
 
-    -   the number of metabolic syndrome risk factors;
-    -   the probability of metabolic syndrome.
-
--   Provide a simple interactive prediction tool within a Jupyter Notebook.
+-   Deploy an interactive Streamlit application for real-time prediction
 
 ------------------------------------------------------------------------
 
 ## Dataset
 
-The analysis is based on a public Korean health dataset obtained from the Korean Public Data Portal.
+The dataset comes from a Korean public health database available via the Korean Public Data Portal.
 
-The original data include demographic, lifestyle and clinical variables required to evaluate metabolic syndrome.
+It contains approximately 1 million records with demographic, lifestyle, and clinical variables.
 
-**Note:** The dataset is not included in this repository. Please obtain it from the original source if redistribution is not permitted.
+**Note:** The dataset is not included in this repository due to file size. Please obtain it from the original source: https://www.data.go.kr/data/15007122/fileData.do.
 
 ------------------------------------------------------------------------
 
@@ -72,58 +69,59 @@ Predicts the probability of metabolic syndrome using:
 -   Smoking status
 -   Alcohol consumption
 
-The notebook also contains a simple interactive section where users can enter these variables and obtain an estimated probability of metabolic syndrome.
+The models were built using statsmodels.
 
 ------------------------------------------------------------------------
 
-## Technologies
+## Interactive Application
 
--   Python
--   Jupyter Notebook
--   pandas
--   NumPy
--   matplotlib
--   statsmodels
+A Streamlit web application allows users to:
+-    Input age, sex, smoking status and alcohol consumption
+-    Obtain an estimated probability of metabolic syndrome
+
+### Run the app locally
+
+```bash
+streamlit run app.py
+```
 
 ------------------------------------------------------------------------
 
-## Repository structure
+## Model
 
-``` text
+The trained model is saved using `joblib` with compression:
+
+```python
+joblib.dump(model, "model.pkl", compress=3)
+```
+
+The model is loaded in the Streamlit app for inference.
+
+------------------------------------------------------------------------
+
+## Repository Structure
+
+```text
 .
-├── LICENSE
-├── README.md
-├── metabolic_syndrome_analysis.ipynb
-└── requirements.txt
+├── app.py                  # Streamlit application
+├── notebook.ipynb          # Data analysis and model training
+├── model.pkl               # Trained model (compressed)
+├── requirements.txt
+├── figures/                # Visualizations
+└── README.md
 ```
 
 ------------------------------------------------------------------------
 
-## Installation
+## Technologies Used
 
-Clone the repository:
-
-``` bash
-git clone https://github.com/ivange00/metabolic-syndrome-analysis.git
-```
-
-Install the required packages:
-
-``` bash
-pip install -r requirements.txt
-```
-
-------------------------------------------------------------------------
-
-## Results
-
-The project provides:
-
--   Descriptive statistics of the study population.
--   Boxplots comparing metabolic syndrome risk factors across smoking and alcohol consumption groups.
--   Linear regression model for the number of risk factors.
--   Logistic regression model for metabolic syndrome.
--   Interactive probability estimation inside the notebook.
+- Python
+- pandas
+- numpy
+- matplotlib
+- statsmodels
+- streamlit
+- joblib
 
 ------------------------------------------------------------------------
 
