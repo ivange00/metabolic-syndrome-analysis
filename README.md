@@ -91,10 +91,10 @@ The notebook also contains a simple interactive section where users can enter th
 
 ``` text
 .
-├── metabolic_syndrome_analysis.ipynb
-├── requirements.txt
 ├── LICENSE
-└── README.md
+├── README.md
+├── metabolic_syndrome_analysis.ipynb
+└── requirements.txt
 ```
 
 ------------------------------------------------------------------------
