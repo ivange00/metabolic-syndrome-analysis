@@ -105,12 +105,12 @@ The model is loaded in the Streamlit app for inference.
 
 ```text
 .
-├── app.py                  # Streamlit application
-├── notebook.ipynb          # Data analysis and model training
-├── model.pkl               # Trained model (compressed)
-├── requirements.txt
-├── figures/                # Visualizations
-└── README.md
+├── LICENSE
+├── README.md
+├── metabolic_syndrome_analysis.ipynb
+├── model.pkl
+├── ms_probability_app.py
+└── requirements.txt
 ```
 
 ------------------------------------------------------------------------
