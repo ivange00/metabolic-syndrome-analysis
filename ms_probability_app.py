@@ -5,7 +5,7 @@ import streamlit as st
 
 # %%
 
-model = joblib.load(r"C:\Users\stbbr\Desktop\Nueva carpeta\Proyectos\Programación\Smoking\logit_model.pkl")
+model = joblib.load("model.pkl")
 
 # %%
 st.title("Metabolic Syndrome Predictor")
