@@ -84,7 +84,7 @@ A Streamlit web application allows users to:
 ### Run the app locally
 
 ```bash
-streamlit run app.py
+streamlit run ms_probability_app.py
 ```
 
 ## Run the app online
