@@ -78,8 +78,12 @@ The models were built using statsmodels.
 ## Interactive Application
 
 A Streamlit web application allows users to:
--    Input age, sex, smoking status and alcohol consumption
--    Obtain an estimated probability of metabolic syndrome
+- Input age, sex, smoking status, and alcohol consumption  
+- Obtain an estimated probability of metabolic syndrome  
+- Generate interactive plots showing how predicted probability changes with age across different groups:
+  - By sex  
+  - By alcohol consumption status  
+  - By smoking status  
 
 ### Run the app locally
 
@@ -130,6 +134,7 @@ The model is loaded in the Streamlit app for inference.
 - statsmodels
 - streamlit
 - joblib
+- seaborn
 
 ------------------------------------------------------------------------
 
